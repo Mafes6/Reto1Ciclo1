@@ -1,0 +1,83 @@
+def solucion(edad, peso):
+    #ACÁ INICIA LA FUNCIÓN SOLUCIÓN (En este espacio debes entregar tu solución)
+    edad = int(input("Indicar la edad del paciente: "))
+    peso = float(input("Indicar el peso del paciente en kilogramos: "))
+    
+    ac = 60.1 / 1000
+    ap = 30.5 / 1000
+    av = -24.4 /1000
+    dieta = 0
+    dia = 0
+    pesoideal = 0
+    
+    
+    if (edad >= 5 and edad <=10):
+      if peso <= 15:
+        estado = "A"
+        dieta=((ac*2)+(ap*1)+(av*2))
+        pesoideal = 22
+        dia = (pesoideal-peso)/dieta
+        print(f"El estado nutricional del paciente es {estado} y se requieren{dia: .0f} dias de dieta para que alcance un peso saludable")
+    
+      elif peso >= 28:
+        estado = "B"
+        dieta = ((ac*0.6)+(ap*1)+(av*4))
+        pesoideal = 24
+        dia = (pesoideal-peso)/dieta+1
+        print(f"El estado nutricional del paciente es {estado} y se requieren{dia: .0f} dias de dieta para que alcance un peso saludable")
+    
+      elif peso >=16 and peso <=27:
+        estado = "C"
+        dieta = ((ac*0.5)+(ap*0.7)+(av*2))
+        pesoideal = 28
+        dia = (pesoideal-peso)/dieta+1
+        print(f"El estado nutricional del paciente es {estado} y se requieren{dia: .0f} dias de dieta para que alcance el peso maximo")
+    
+    if (edad >= 11 and edad <=13):
+      if peso <= 29:
+        estado = "A"
+        dieta=((ac*2)+(ap*1)+(av*2))
+        pesoideal = 32
+        dia = (pesoideal-peso)/dieta+1
+        print(f"El estado nutricional del paciente es {estado} y se requieren{dia: .0f} dias de dieta para que alcance un peso saludable")
+    
+      elif peso >= 50:
+        estado = "B"
+        dieta=((ac*0.6)+(ap*1)+(av*4))
+        pesoideal = 43
+        dia = (pesoideal-peso)/dieta
+       
+        print(f"El estado nutricional del paciente es {estado} y se requieren{dia: .0f} dias de dieta para que alcance un peso saludable")
+    
+      elif peso >=30 and peso <=49:
+        estado = "C"
+        dieta = ((ac*0.5)+(ap*0.7)+(av*2))
+        pesoideal = 50
+        dia = (pesoideal-peso)/dieta+1
+       
+        print(f"El estado nutricional del paciente es {estado} y se requieren{dia: .0f} dias de dieta para que alcance el peso maximo")
+    
+    if (edad >= 14 and edad <=17):
+    
+      if peso <= 50:
+        estado = "A"
+        dieta = ((ac*2)+(ap*1)+(av*2))
+        pesoideal = 56
+        dia = (pesoideal-peso)/dieta
+        print(f"El estado nutricional del paciente es {estado} y se requieren{dia: .0f} dias de dieta para que alcance un peso saludable")
+    
+      elif peso >= 63:
+        estado = "B"
+        dieta = ((ac*0.6)+(ap*1)+(av*4))
+        pesoideal = 58
+        dia = (pesoideal-peso)/dieta
+       
+        print(f"El estado nutricional del paciente es {estado} y se requieren{dia: .0f} dias de dieta para que alcance un peso saludable")
+
+      elif peso >=51 and peso <=62:
+        estado = "C"
+        dieta = ((ac*0.5)+(ap*0.7)+(av*2))
+        pesoideal = 63
+        dia = (pesoideal-peso)/dieta
+        print(f"El estado nutricional del paciente es {estado} y se requieren{dia: .0f} dias de dieta para que alcance el peso maximo")
+
